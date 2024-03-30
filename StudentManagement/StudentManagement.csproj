@@ -60,7 +60,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="student.cs" />
+    <Compile Include="Student.cs" />
     <Compile Include="StudentManager.cs" />
     <EmbeddedResource Include="dataForm.resx">
       <DependentUpon>dataForm.cs</DependentUpon>
