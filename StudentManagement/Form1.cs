@@ -32,7 +32,7 @@ namespace StudentManagement
 
 
             studentManager.AddStudent(new Student(
-                lblName.Text,
+                txtName.Text,
                 Convert.ToInt32(txtSem.Text),
                 txtAddress.Text,
                 txtPhone.Text
@@ -49,6 +49,11 @@ namespace StudentManagement
         {
             dataForm df = new dataForm(studentManager);
             df.Show();
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

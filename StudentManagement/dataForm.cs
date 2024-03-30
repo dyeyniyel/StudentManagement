@@ -28,5 +28,10 @@ namespace StudentManagement
         private void databinding() {
             dgvStudents.DataSource = studentManager.GetStudents();
         }
+
+        private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

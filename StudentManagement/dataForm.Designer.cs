@@ -40,12 +40,14 @@
             // dgvStudents
             // 
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudents.Location = new System.Drawing.Point(109, 75);
+            this.dgvStudents.Location = new System.Drawing.Point(73, 49);
+            this.dgvStudents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.RowHeadersWidth = 62;
             this.dgvStudents.RowTemplate.Height = 28;
-            this.dgvStudents.Size = new System.Drawing.Size(953, 596);
+            this.dgvStudents.Size = new System.Drawing.Size(635, 387);
             this.dgvStudents.TabIndex = 0;
+            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellContentClick);
             // 
             // studentManagerBindingSource
             // 
@@ -57,10 +59,11 @@
             // 
             // dataForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1199, 783);
+            this.ClientSize = new System.Drawing.Size(799, 509);
             this.Controls.Add(this.dgvStudents);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "dataForm";
             this.Text = "dataForm";
             this.Load += new System.EventHandler(this.dataForm_Load);
