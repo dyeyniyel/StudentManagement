@@ -12,6 +12,7 @@ namespace StudentManagement
 {
     public partial class dataForm : Form
     {
+
         StudentManager studentManager;
 
         public dataForm(StudentManager sm)
@@ -25,13 +26,9 @@ namespace StudentManagement
             databinding();
         }
 
-        private void databinding() {
-            dgvStudents.DataSource = studentManager.GetStudents();
-        }
-
-        private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void databinding()
         {
-
+            dgvStudents.DataSource = studentManager.GetStudents();
         }
     }
 }
