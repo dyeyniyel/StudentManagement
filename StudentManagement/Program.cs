@@ -14,11 +14,15 @@ namespace StudentManagement
         [STAThread]
         static void Main()
         {
-
             StudentManager studentManager = new StudentManager();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            studentManager.addStudent(
+                new Student(studentManager.GetCount(), "Urvish", 1, "121 Trudell st", "416294")
+                );
+
             Application.Run(new Form1(studentManager));
         }
     }
