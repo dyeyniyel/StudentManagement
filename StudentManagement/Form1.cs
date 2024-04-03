@@ -4,18 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace StudentManagement
 {
     public partial class Form1 : Form
     {
-
         StudentManager studentManager;
-
         public Form1(StudentManager sm)
         {
             InitializeComponent();
@@ -24,22 +22,25 @@ namespace StudentManagement
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        //    dgvStudents.DataSource = studentManager.GetStudents();
+            txtid.Text = studentManager.GetCount().ToString();
+            txtid.Enabled = false;
+
         }
+
+
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
 
-
-            studentManager.AddStudent(new Student(
-                txtName.Text,
-                Convert.ToInt32(txtSem.Text),
-                txtAddress.Text,
-                txtPhone.Text
+            studentManager.addStudent(new Student(
+                    studentManager.GetCount(),
+                    txtName.Text,
+                    Convert.ToInt32(txtSem.Text),
+                    txtAddress.Text,
+                    txtPhone.Text
                 ));
 
             MessageBox.Show("New Student Added");
-
 
 
 
@@ -51,9 +52,10 @@ namespace StudentManagement
             df.Show();
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            editForm frm = new editForm(studentManager);
+            frm.Show();
         }
     }
 }
