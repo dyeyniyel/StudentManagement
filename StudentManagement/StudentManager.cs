@@ -15,16 +15,30 @@ namespace StudentManagement
             this.students = new List<Student>();
         }
 
-        public void AddStudent(Student student)
+        public void addStudent(Student student)
         {
             students.Add(student);
-
         }
 
-        // Method to get the list of students
         public List<Student> GetStudents()
         {
             return students;
         }
+
+        public int GetCount() { return students.Count + 1; }
+
+        public Student GetStudent(int id)
+        {
+            return students[id - 1];
+        }
+
+        public bool UpdateStudent(Student student)
+        {
+            students[student.Id - 1] = student;
+
+            return true;
+
+        }
+
     }
 }
